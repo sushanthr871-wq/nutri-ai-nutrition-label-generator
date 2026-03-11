@@ -549,3 +549,4 @@ This project is private and not currently licensed for public distribution.
 <p align="center">
   Made with 💚 by <b>NutriAI Team</b>
 </p>
+# nutri-ai-nutrition-label
