@@ -51,6 +51,12 @@ export default function HistoryPage() {
     const [searchQuery, setSearchQuery] = useState("")
 
     useEffect(() => {
+        if (!isLoading && !user) {
+            router.push("/auth")
+        }
+    }, [user, isLoading, router])
+
+    useEffect(() => {
         async function fetchRecipes() {
             try {
                 const res = await fetch("/api/recipe")
@@ -78,7 +84,6 @@ export default function HistoryPage() {
     }
 
     if (!user) {
-        router.push("/auth")
         return null
     }
 
